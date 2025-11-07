@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
 }
 
 .contenedorGeneral {
-  width: fit-content;
+  width: 300px;
   height: auto;
   border: 1px solid red;
   margin: 50px auto;
@@ -18,17 +18,35 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-h1 {
-  color: azure;
-
+  padding: 20px;
+  gap: 20px;
 }
 
 .spanResultado {
   background: yellow;
-  width: 90%;
+  width: 100%;
   text-align: center;
   font-weight: bold;
   font-size: 1.5em;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.txtGrados {
+  font-size: 1.2em;
+  padding: 5px;
+  width: 60%;
+  text-align: center;
+}
+
+.btnConvertir {
+  width: 40%;
+}
+
+.contenedorDatos {
+  display: flex;
 }
