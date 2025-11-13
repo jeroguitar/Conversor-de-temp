@@ -5,9 +5,17 @@ const btnConvertir = document.getElementById("btnConvertir");
 const spanResultados = document.getElementById("spanResultados");
 
 btnConvertir.addEventListener("click",()=>{
-  let celsius = Number (txtGrados.value);
+  let mensaje;
+  let celsius = txtGrados.value;
+  if (celsius === "") {
+    mensaje = "No ingresaste un valor";
+  } else {
+    celsius = Number(txtGrados.value);
+    let fahrenheit = celsius * 1.8 + 32;
+    mensaje = `${fahrenheit.toFixed(2)} °F`;
+  }
 
-  let mensaje = (celsius === "") ? "Ingresa un valor" : `${celsius * 1.8 + 32} °F`;
-  spanResultados.textContent =mensaje;
-  txtGrados.textContent= "";
-}); 
+
+  txtGrados.textContent = "";
+  spanResultados.textContent = mensaje;
+});
